@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ 
+ # Przekierowanie SSL
+ # RewriteCond %{HTTPS} !=on
+ # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+ # Koniec przekierowania SSL
+
+ # Przekierowanie index.php
+ RewriteRule ^oferta /offer.php?page=offer&action=index [L]
+ RewriteRule ^referencje /references.php?page=references&action=index [L]
+ RewriteRule ^certyfikaty /certificates.php?page=certificates&action=index [L]
+ RewriteRule ^kontakt /contact.php?page=contact&action=index [L]
+ RewriteRule ^$ /index.php?page=home&action=index [L]
+ # Koniec przekierowania index.php
+
+ # RewriteBase /
+ # RewriteRule ^index\.php$ - [L]
+
+ # Przekierowanie 404
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^(.*)$ /index.php?page=home&action=index [L]
+ # Koniec przekierowania 404
+
+</IfModule>

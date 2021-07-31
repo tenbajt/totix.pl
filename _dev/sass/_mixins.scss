@@ -1,0 +1,30 @@
+@mixin media-breakpoint-up-sm {
+  @include media-breakpoint-up(sm) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-up-md {
+  @include media-breakpoint-up(md) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-up-lg {
+  @include media-breakpoint-up(lg) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-up-xl {
+  @include media-breakpoint-up(xl) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-up($name) {
+  $min: map-get($media-breakpoints, $name);
+  @media (min-width: $min) {
+    @content;
+  }
+}

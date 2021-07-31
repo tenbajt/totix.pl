@@ -1,0 +1,15 @@
+$black-high:     rgba(0, 0, 0, .87);
+$black-medium:   rgba(0, 0, 0, .60);
+$black-disabled: rgba(0, 0, 0, .38);
+
+$white-high:     rgba(255, 255, 255, .87);
+$white-medium:   rgba(255, 255, 255, .60);
+$white-disabled: rgba(255, 255, 255, .38);
+
+$media-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
